@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <table>
+        <tr>
+        <td> Name </td>
+        <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+        <td> CELL </td>
+        <td><input type="text" id="cell"></td>
+        </tr>
+        <tr>
+        <td> ADDRESS </td>
+        <td><input type="text" id="address"></td>
+        </tr>
+       <tr>
+        
+        <td><input type="submit" value="submit"  onclick="savelocalstorage()"></td>
+        </tr>
+        </table>
+    </form>
+<div id="tableId">
+</div>
+<script>
+var nameArray = [];
+function savelocalstorage(){
+    var a = document.getElementById("name").value
+    var b = document.getElementById("cell").value
+    var c = document.getElementById("address").value
+    var d = a + b + c
+    nameArray.push(d);
+ 
+        
+            // name push in array 
+                       // nameArray save in localStorage            
+            localStorage.setItem("names", nameArray);
+            // Render array data using this function
+            displayData();
+        }
+
+        function displayData() {
+
+            // empty table element            
+            document.getElementById("tableId").innerHTML = "";
+
+            // get localStorage value                        
+            var newArray = localStorage.getItem("names");
+            if (newArray) {
+                newArray = newArray.split(",");
+                nameArray = newArray;
+                document.getElementById("tableId").innerHTML += "<tr><th>Index</th><th>Name</th><th></th></tr>";
+            } else newArray = [];
+
+            // loop in array to show all names
+            for (var i = 0; i < newArray.length; i++) {
+                document.getElementById("tableId").innerHTML += "<tr><td>" + i + "</td><td>" + newArray[i] + "</td>"
+            }
+
+        }
+
+        // remove particular row from table and name from localStorage
+       // function deleteRow(index) {
+            // Remove name from array
+         //   nameArray.splice(index, 1);
+            // Then above array set in localStorage
+           // localStorage.setItem("names", nameArray);
+            //displayData();
+        //}
+        //displayData();
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

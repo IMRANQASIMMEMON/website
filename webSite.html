@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<link rel="stylesheet" type="text/css" href="webSite.css" />
+</head>
+<body>
+    <div id="containes">
+        <div id="header">
+        <h1>ZEESHAN MOBILE CENTER</h1>
+        </div>
+        <div id="shop">
+        <img src="images/MOBIL SHOP.jpg" width="700px" height="350px"
+         onmouseover="src='images/zeeshan.jpg'" onmouseout="src='images/MOBIL SHOP.jpg'"/>
+               </div>
+       <div id="content">
+        <div id="now">
+            <h1>Navigation</h1>
+        <ul>
+            <li><a href="#"class="navi">HOME</a></li>
+            <li><a href="#"class="navi"> DETAIL</a></li>
+            <li><a href="#" class="navi">  CONTACT</a></li>
+            <li><a href="#"class="navi" id="order" onclick="order()"> FOR ORDER</a></li>
+       
+        </ul>
+        </div>
+<div id="main">
+    <table>
+        <tr>
+            <td><img src="images/htc.jpg" class="handfree" width="200" height="150"
+             onmouseover="src='images/bluetooth.jpg'" onmouseout="src='images/htc.jpg'" /></td>
+            <td><img src="images/samsang.jpg" width="200" height="150" class="handfree"
+             onmouseover="src='images/phone.png'" onmouseout="src='images/samsang.jpg'" /></td>
+            <td><img src="images/samsang3.jpg" width="200" height="150" class="handfree"
+             onmouseover="src='images/samsang2.jpg'" onmouseout="src='images/samsang3.jpg'" /></td> 
+           
+        </tr>
+         <tr>
+            <td><img src="images/memory-card.png" width="200" height="150" class="handfree"
+             onmouseover="src='images/kingston.jpg'" onmouseout="src='images/memory-card.png'" /></td>
+            <td><img src="images/htc2.jpg" width="200" height="150" class="handfree"  
+            onmouseover="src='images/watch.jpg'" onmouseout="src='images/htc2.jpg'"/></td>
+            <td><img src="images/phones.jpg " width="200" height="150" class="handfree"
+             onmouseover="src='images/selfee.jpg'" onmouseout="src='images/phones.jpg'" /></td> 
+           
+        </tr>
+    </table>
+</div>
+       </div>
+<div id="package">
+
+<h3>WE HAVE ALL NETWORKS</h3>
+<img src="images/io.jpg" width="130" height="70"/>
+<img src="images/zong1.png" width="130" height="70"/>
+<img src="images/Ufone2.jpg" width="130" height="70"/>
+<img src="images/Telenor-4G.jpg" width="130" height="70"/>
+<h3>WE HAVE MANY package</h3>
+<img src="images/Jazz.jpg" width="130" height="70"/>
+<img src="images/jazz1.jpg" width="130" height="70"/>
+<img src="images/jazz2.jpg" width="130" height="70"/>
+<img src="images/ufone.jpg" width="130" height="70"/>
+<img src="images/ufone1.jpg" width="130" height="70"/>
+<img src="images/telenor.jpg" width="130" height="70"/>
+<img src="images/zong.jpg" width="130" height="70"/>
+<img src="images/zong2.png" width="130" height="70"/>
+    </div>
+
+<div id="footer">
+    PROPRITER: <span> ZEESHAN </span><br>
+        ADD<span> :</span> AREA NEAR ZIAUDDIN HOSPITAL
+        CEL<span> :</span>  0343-3564313
+    
+</div>
+       </div>
+  <script>
+      function order(){
+         var orderVal = document.getElementById("order");
+         orderVal.innerHTML ="<table><tr><td>NAME</td><td><input type='text'></td></tr><tr><td>CEL:</td><td><input type='text'></td><td>ADDRESS</td><td><input type='text'></td><td>submit</td><td><input type='submit' value='submit'></td> </table>"
+        
+    
+      }     
+      
+      
+      
+      
+      </script>     
+    
+</body>
+</html>
